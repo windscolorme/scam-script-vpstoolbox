@@ -279,14 +279,9 @@ echo "nameserver 1.1.1.1" > /etc/resolv.conf
 echo "nameserver 9.9.9.10" >> /etc/resolv.conf
 echo "nameserver 2606:4700:4700::1111" >> /etc/resolv.conf
 echo "nameserver 2001:4860:4860::8844" >> /etc/resolv.conf
-echo -e " --- \${BLUE}Telegram 群组链接\${NOCOLOR} ---"
-echo -e "    \${YELLOW}https://t.me/+VKJo-UzV4DtSbv5W\${NOCOLOR}"
 echo -e "*********************"
 echo -e " --- ${BLUE}如果觉得好用，欢迎打钱帮助开发或者尝试以下服务，😃❤️🤣${NOCOLOR} ---"
 echo -e "    ${YELLOW}Namesilo: https://www.namesilo.com/?rid=685fb47qi${NOCOLOR}"
-echo -e "    ${YELLOW}Newsdemon: https://members.newsdemon.com/?ref=12142571${NOCOLOR}"
-echo -e "    ${YELLOW}NZBfinder: https://nzbfinder.ws/register?ref=271232${NOCOLOR}"
-echo -e "    ${YELLOW}ETH: 0x9DB5737AB34E1F5d1303E9eD726776eebba3BF16${NOCOLOR}"
 echo -e "*********************"
 EOF
 chmod +x /etc/profile.d/mymotd.sh
