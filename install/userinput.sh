@@ -254,7 +254,7 @@ userinput_full() {
     check_file="off"
   fi
   if [[ -z ${check_speed} ]]; then
-    check_speed="on"
+    check_speed="off"
   fi
   if [[ -z ${check_mariadb} ]]; then
     check_mariadb="off"
@@ -299,7 +299,7 @@ userinput_full() {
   fi
 
   if [[ -z ${check_grpc} ]]; then
-    check_grpc="on"
+    check_grpc="off"
   fi
 
   whiptail --clear --backtitle "Hi,请按空格以及方向键来选择需要安装/更新的软件,请自行下拉以查看更多(Please press space and Arrow keys to choose)" --title "应用安装菜单" --checklist --separate-output --nocancel "请按空格及方向键来选择需要安装/更新的应用程序。" 24 65 16 \
