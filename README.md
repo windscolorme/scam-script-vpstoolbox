@@ -1,10 +1,8 @@
 # ![VPSToolBox](logo.png)
 
-[Telegram 频道](https://t.me/vpstoolbox) [English version](README_en.md)
+[English version](README_en.md)
 
 厌倦了总是需要手动输入命令安装博客，网盘，RSS，邮箱，影音，代理了吗？VPSToolBox 提供了一整套全自动化的解决方案，解放双手，从今天开始！
-
-> 一分钱一分货，觉得网络有问题的时候首先想想你在网络上投入了多少钱最合适。
 
 ## 给纯新手小白看的教程
 
@@ -25,8 +23,6 @@ apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsec
 ## 如果觉得好用，欢迎打钱帮助开发或者尝试以下服务，😃❤️🤣
 
 [Namesilo](https://www.namesilo.com/?rid=685fb47qi)
-
-[Hostyun](https://my.hostyun.com/page.aspx?c=referral&u=27710)
 
 ## 路由测试
 
@@ -63,7 +59,6 @@ route_test
 ## 免责声明 Disclaimer
 
 1. 本项目不对使用 Vultr 提供的机器造成的任何可能问题负责(this project is not responsible for any possible problems caused by Vultr machines) !
-2. 本项目部分非必须应用需要较高的系统资源和服务器配置(Rocket.chat以及邮箱等)，请量力而行 ！
 
 ## 支援的软件及应用 Supported applications
 
@@ -110,8 +105,6 @@ route_test
   - [ ] [Docker](https://www.docker.com/)
   - [ ] [Opentracker 高网络需求](https://erdgeist.org/arts/software/opentracker/)
   - [ ] [Qbittorrent_origin_version 高硬盘需求](https://github.com/qbittorrent/qBittorrent)
-
-> 欢迎 PR 更多应用。
 
 ## 支援的 Linux 发行版
 
@@ -167,26 +160,6 @@ cat /root/.trojan/letcron.log
 
 使用`bash shell`实现。
 
-## 贡献 Contritbution
-
-1. **Fork**本项目
-2. **Clone**到你自己的机器
-3. **Commit** 修改
-4. **Push** 到你自己的 Fork
-5. 提交**Pull request**
-6. PR 要求请看[**pr 要求**](https://github.com/johnrosen1/vpstoolbox/tree/dev/install)
-
-## Bug 反馈以及 Feature request
-
-- [x] [Github Issue](https://github.com/johnrosen1/vpstoolbox/issues)
-- [x] [TG 群组](https://t.me/vpstoolbox_chat)
-
-注：
-
-1. 其他的反馈方式我大概率看不见。
-2. 除非你有能说服我的理由或者直接提 pr,否则**不接受代理软件支援请求**(比如 wireguard 之类的)。
-3. 无论发生什么请**务必附上复现错误的步骤，截图，OS 发行版等信息**,否则我不可能能够提供任何帮助。
-
 ## Code Quality
 
 1. 本项目实现了**模块化**
@@ -199,32 +172,6 @@ cat /root/.trojan/letcron.log
 
 1. 本项目主要采用 systemd+docker-compose 启动服务。
 2. 具体的懒得写了,`systemctl`查看运行状态,有问题记得反馈即可。
-
-## License
-
-```
-MIT License
-
-Copyright (c) 2019-2022 johnrosen1
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ## Stargazers over time
 
