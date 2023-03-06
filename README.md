@@ -35,7 +35,7 @@ source route.sh
 route_test
 ```
 
-## Demo
+## 完成效果图
 
 ![demo](https://raw.githubusercontent.com/johnrosen1/vpstoolbox/master/images/demo.png)
 
@@ -103,7 +103,6 @@ route_test
   - [x] [Fail2ban 无最低配置要求](https://github.com/fail2ban/fail2ban)
 - 其他
   - [ ] [Docker](https://www.docker.com/)
-  - [ ] [Opentracker 高网络需求](https://erdgeist.org/arts/software/opentracker/)
   - [ ] [Qbittorrent_origin_version 高硬盘需求](https://github.com/qbittorrent/qBittorrent)
 
 ## 支援的 Linux 发行版
