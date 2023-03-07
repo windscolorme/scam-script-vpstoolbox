@@ -282,6 +282,7 @@ echo "nameserver 2001:4860:4860::8844" >> /etc/resolv.conf
 echo -e "*********************"
 echo -e " --- ${BLUE}如果觉得好用，欢迎打钱帮助开发或者尝试以下服务，😃❤️🤣${NOCOLOR} ---"
 echo -e "    ${YELLOW}Namesilo: https://www.namesilo.com/?rid=685fb47qi${NOCOLOR}"
+echo -e "    ${YELLOW}搬瓦工: https://bandwagonhost.com/aff.php?aff=68197${NOCOLOR}"
 echo -e "*********************"
 EOF
 chmod +x /etc/profile.d/mymotd.sh
