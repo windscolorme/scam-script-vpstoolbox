@@ -4,11 +4,7 @@
 
 厌倦了总是需要手动输入命令安装博客，网盘，RSS，邮箱，影音，代理了吗？VPSToolBox 提供了一整套全自动化的解决方案，解放双手，从今天开始！
 
-## 给纯新手小白看的教程
-
-[纯新手教程点这里！！！](README_bai.md)
-
-## 一键命令 One click command
+## 使用方法 How to use
 
 ```bash
 apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update && apt-get install sudo curl screen -y && curl -LO https://raw.githubusercontent.com/johnrosen1/vpstoolbox/master/vps.sh && sudo screen -U bash vps.sh
@@ -16,14 +12,18 @@ apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsec
 
 > 仅支援 **Debian/Ubuntu** 系统。
 
-## 流程图
+## 给纯新手小白看的教程
 
-![流程图](https://raw.githubusercontent.com/johnrosen1/vpstoolbox/master/images/flow.svg)
+[纯新手教程点这里！！！](README_bai.md)
 
 ## 如果觉得好用，欢迎打钱帮助开发或者尝试以下服务，😃❤️🤣
 
 - [Namesilo](https://www.namesilo.com/?rid=685fb47qi)
 - [搬瓦工](https://bandwagonhost.com/aff.php?aff=68197)
+
+## 流程图
+
+![流程图](https://raw.githubusercontent.com/johnrosen1/vpstoolbox/master/images/flow.svg)
 
 ## 路由测试
 
