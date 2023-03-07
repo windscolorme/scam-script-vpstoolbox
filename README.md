@@ -2,7 +2,9 @@
 
 [English version](README_en.md)
 
-厌倦了总是需要手动输入命令安装博客，网盘，RSS，邮箱，影音，代理了吗？VPSToolBox 提供了一整套全自动化的解决方案，解放双手，从今天开始！
+一键在 Linux VPS 上安装 Trojan-GFW。
+
+Trojan-GFW script designed for Debian based Linux vps.
 
 ## 使用方法 How to use
 
