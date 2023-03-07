@@ -86,16 +86,12 @@ fi
   whiptail --clear --backtitle "Hi,请按空格以及方向键来选择需要安装/更新的软件,请自行下拉以查看更多(Please press space and Arrow keys to choose)" --title "应用安装菜单" --checklist --separate-output --nocancel "请按空格及方向键来选择需要安装/更新的应用程序。" 18 65 10 \
   "Back" "返回上级菜单(Back to main menu)" off \
   "trojan" "Trojan-GFW+TCP-BBR" on \
-  "grpc" "Vless+gRPC(支持CDN)" ${check_grpc} \
   "alist" "alist网盘管理器" on \
-  "speed" "Speedtest(测试本地网络到VPS的延迟及带宽)" ${check_speed} \
+  "ss" "shadowsocks-rust(不支持CDN)" ${check_ss} \
+  "grpc" "Vless+gRPC(支持CDN)" ${check_grpc} \
   "port" "自定义Trojan-GFW/Vless(grpc)端口" off \
-  "hy" "hysteria(仅推荐用于垃圾线路)" ${check_hy} \
   "ip" "免费ip证书(没有域名的话选这个)" ${check_ip} \
   "hexo" "Hexo Blog" off \
-  "aria" "Aria2+AriaNG+Filebrowser" ${check_aria} \
-  "ss" "shadowsocks-rust(不支持CDN)" ${check_ss} \
-  "rss" "RSSHUB + Miniflux(RSS生成器+RSS阅读器)" ${check_rss} \
   "fail2ban" "Fail2ban(防SSH爆破用)" on \
   "net" "Netdata(监测伺服器运行状态)" off 2>results
 
@@ -113,19 +109,9 @@ fi
       install_hexo=0
       install_alist=1
       ;;
-    hy)
-      install_hy=1
-      ;;
     ip)
       ipissue=1
       domain=${myip}
-      ;;
-    aria)
-      check_aria="on"
-      install_aria=1
-      check_file="on"
-      install_filebrowser=1
-      install_tracker=1
       ;;
     hexo)
       install_hexo=1
@@ -140,17 +126,6 @@ fi
       ;;
     net)
       install_netdata=1
-      ;;
-    speed)
-      check_speed="on"
-      install_speedtest=1
-      install_php=1
-      ;;
-    rss)
-      check_rss="on"
-      install_rss=1
-      install_docker=1
-      install_redis=1
       ;;
     fail2ban)
       check_fail2ban="on"
@@ -195,7 +170,7 @@ fi
   #echo "" >> /etc/hosts
   #echo "$(jq -r '.ip' "/root/.trojan/ip.json") ${domain}" >> /etc/hosts
     while [[ -z ${password1} ]]; do
-        password1=$(whiptail --inputbox --nocancel "Trojan密码 (**最长30字符，请勿输入 @ **)" 8 68 --title "设置主系统密码" 3>&1 1>&2 2>&3 | sed 's/ //g')
+        password1=$(whiptail --inputbox --nocancel "Trojan密码 (**最长30字符，请勿输入 @ 等特殊字符**)" 8 68 --title "设置主系统密码" 3>&1 1>&2 2>&3 | sed 's/ //g')
         n=${#password1}
       if [[ ${n} > 30 ]] || [[ ${n} == 0 ]] || [[ ${n} -le 3  ]]  ; then
         password1=$(
