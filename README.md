@@ -4,7 +4,7 @@
 
 一键在 Linux VPS 上安装 Trojan-GFW。
 
-Trojan-GFW script designed for Debian based Linux virtual private server.
+A Trojan-GFW script designed for Debian based Linux virtual private server.
 
 ## 使用方法 How to use
 
