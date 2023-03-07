@@ -22,8 +22,8 @@ apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsec
 
 ## 如果觉得好用，欢迎打钱帮助开发或者尝试以下服务，😃❤️🤣
 
-[Namesilo](https://www.namesilo.com/?rid=685fb47qi)
-[搬瓦工](https://bandwagonhost.com/aff.php?aff=68197)
+- [Namesilo](https://www.namesilo.com/?rid=685fb47qi)
+- [搬瓦工](https://bandwagonhost.com/aff.php?aff=68197)
 
 ## 路由测试
 
