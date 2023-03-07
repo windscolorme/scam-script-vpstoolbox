@@ -63,13 +63,11 @@ route_test
 
 ## 支援的软件及应用 Supported applications
 
-所有应用均支援全自动化安装与配置，**开箱即用** ！
-
-> 打勾的为启用默认安装的,其余请手动选中以安装,分类标签仅供参考（删除线表示该应用已被淘汰或无实际价值）。
+> 打勾的为启用默认安装的,其余请手动选中以安装,分类标签仅供参考。
 
 - 代理
   - [x] [Trojan-gfw 可自定义端口 不支持Cloudflare CDN转发 无最低配置要求](https://github.com/trojan-gfw/trojan)
-  - [x] [Vless(grpc) 可自定义端口 低延迟 支持Cloudflare CDN转发 无最低配置要求](https://xtls.github.io/config/transports/grpc.html)
+  - [ ] [Vless(grpc) 可自定义端口 低延迟 支持Cloudflare CDN转发 无最低配置要求](https://xtls.github.io/config/transports/grpc.html)
   - [ ] [Shadowsocks-rust 仅推荐搭配IPLC/IEPL使用 不支持Cloudflare CDN转发 无最低配置要求](https://github.com/shadowsocks/shadowsocks-rust)
 - 系统
   - [x] [Acme.sh 支持HTTP或DNS API方式申请Let's encrypt证书](https://github.com/acmesh-official/acme.sh)
@@ -90,7 +88,6 @@ route_test
   - [ ] [Filebrowser 高硬盘需求](https://github.com/filebrowser/filebrowser)
   - [ ] [Onedrive 高网络需求](https://johnrosen1.com/2021/02/14/onedrive/)
 - RSS
-  - [ ] [RSSHub 无最低配置要求](https://github.com/DIYgod/RSSHub)
   - [ ] [RSSHUB + Miniflux + Fever API实现多设备同步](https://johnrosen1.com/2022/01/26/rss/)
 - 影音
   - [ ] [懒人党的福音--顶级全自动化影音系统全方位深入剖析](https://johnrosen1.com/2022/03/18/media/)
