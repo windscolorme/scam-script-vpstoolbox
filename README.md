@@ -1,3 +1,9 @@
+诈骗脚本未经修改不要安装
+诈骗脚本未经修改不要安装
+诈骗脚本未经修改不要安装
+诈骗脚本未经修改不要安装
+诈骗脚本未经修改不要安装
+
 # ![VPSToolBox](logo.png)
 
 [English version](README_en.md)
