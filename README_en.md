@@ -1,3 +1,15 @@
+scam script
+scam script
+scam script
+scam script
+scam script
+scam script
+scam script
+scam script
+scam script
+DO NOT USE IT
+
+
 # ![VPSToolBox](logo.png)
 
 [TG Channel](https://t.me/vpstoolbox) [简体中文](README.md)
